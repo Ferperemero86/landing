@@ -19,14 +19,21 @@
 
 /* ... Head TITLE ... */
 .team-header {
-  margin-top: 8em;
-
+  h4 {
+    margin: 150px 0 60px 0;
+  }
 }
 
 /* ... ALL TEAM PICS :: Content blocks Images ... */
 #team {
+  -webkit-box-shadow: 10px 10px 100px 100px @bg-lilac-light;
+  -moz-box-shadow: 10px 10px 100px 100px @bg-lilac-light;
+  box-shadow: 10px 10px 100px 100px @bg-lilac-light;
   // Chairmen IMG
   .bosses-area {
+    .m6 {
+      margin-top: 100px;
+    }
     .upp-boss-img {
       width: 300px;
       height: 300px;
@@ -52,9 +59,16 @@
 
   // Employees IMG
   .crew-area {
+
+    .m3 {
+      width: 50%;
+      text-align: center;
+    }
+
     .upp-team-img {
       width: 200px;
       height: 200px;
+      text-align: center;
       .bg-pic;
 
       &.team-arnaiz {
@@ -73,97 +87,9 @@
         }
       }
 
-      &.team-gorka {
-        background: url("@@config.base_path/images/about/gorka_dev.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/gorka_dev_2.jpg");
-        }
-      }
-
-      &.team-noemi {
-        background: url("@@config.base_path/images/about/noemi_account.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/noemi_account_2.jpg");
-        }
-      }
-
-      &.team-cris {
-        background: url("@@config.base_path/images/about/cris_communication.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/cris_communication_2.jpg");
-        }
-      }
-
-      &.team-jotaele {
-        background: url("@@config.base_path/images/about/javi_design.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/javi_design_2.jpg");
-        }
-      }
-
-      &.team-marcos {
-        background: url("@@config.base_path/images/about/marcos_dev.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/marcos_dev_2.jpg");
-        }
-      }
-
-      &.team-alvaro {
-        background: url("@@config.base_path/images/about/alvaro_sales.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/alvaro_sales_2.jpg");
-        }
-      }
-
-      &.team-juanjo {
-        background: url("@@config.base_path/images/about/juanjo_dev.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/juanjo_dev_2.jpg");
-        }
-      }
-
-      &.team-margot {
-        background: url("@@config.base_path/images/about/margot_support.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/margot_support_2.jpg");
-        }
-      }
-
-      &.team-clara {
-        background: url("@@config.base_path/images/about/clara_dev.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/clara_dev_2.jpg");
-        }
-      }
-
-      &.team-lucia {
-        background: url("@@config.base_path/images/about/lucia_content-manager.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/lucia_content-manager_2.jpg");
-        }
-      }
-
-      &.team-newfella {
-        background: url("@@config.base_path/images/about/new_fella.jpg");
-
-        &:hover {
-          background: url("@@config.base_path/images/about/new_fella_2.jpg");
-        }
-      }
     }
   }
 }
-
 
 
 /* ... ALL TEAM PICS :: Content blocks Details ... */
@@ -179,7 +105,8 @@
   .team-work {
     color: @main-green;
     font-weight: 600;
-    
+    text-align: center;
+
     &::-moz-selection,
     &::selection {
       color: @white;
@@ -188,7 +115,6 @@
 
   .team-job {
     background-color: @main-green;
-    border-radius: 50%;
     color: @white;
     position: relative;
     font-size: 18px;
@@ -205,7 +131,6 @@
 
   .team-rrss {
     background-color: @light-lilac;
-    border-radius: 50%;
     color: @white;
     position: relative;
 
@@ -223,14 +148,14 @@
     padding: 0 30px;
 
     h5 {
-      font-size: 26px;
+      font-size: 23px;
     }
 
     // chairmen job-position icon
     .team-job {
       padding: 14px 6px 4px 6px;
-      top: 50px;
-      right: 150px;
+      bottom: 10px;
+      right: 40px;
 
       i:before {
         font-size: 1.6em;
@@ -243,11 +168,11 @@
 
       &.team-linkedin {
         top: 100px;
-        left: 180px;
+        right: 130px;
       }
       &.team-twitter {
         top: 220px;
-        left: 135px;
+        right: 180px;
       }
     }
   }
@@ -257,7 +182,7 @@
     padding: 30px 0;
 
     h5 {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .team-job {
@@ -269,14 +194,8 @@
       &.team-sales,
       &.team-support,
       &.team-design {
-        top: 40px;
-        right: 110px;
-      }
-
-      // last one: for hiring
-      &.team-new {
-        padding: 4px 8px 4px 8px;
-        right: 62px;
+        bottom: 10px;
+        right: 40px;
       }
     }
 
@@ -286,29 +205,19 @@
 
       &.team-linkedin {
         top: 70px;
-        left: 132px;
+        right: 82px;
       }
       &.team-twitter {
         top: 150px;
-        left: 92px;
+        right: 126px;
       }
     }
   }
 }
 
+
 /* ... MEDIA QUERIES :: About Us (Team) view ... */
 
-@media only screen and (max-width : 940px) {
-  #team .crew-area .m3 {
-    width: 33.3333%;
-  }
-}
-
-@media only screen and (max-width : 801px) {
-  #team .crew-area .m3 {
-    width: 50%;
-  }
-}
 
 @media only screen and (max-width : 750px) {
   #team .bosses-area .m6 {
@@ -332,8 +241,8 @@
       }
 
       .team-boss {
-        top: 40px;
-        right: 110px;
+        bottom: 10px;
+        right: 30px;
       }
 
       .team-rrss {
@@ -342,12 +251,12 @@
 
         &.team-linkedin {
           top: 70px;
-          left: 132px;
+          right: 78px;
         }
 
         &.team-twitter {
           top: 150px;
-          left: 92px;
+          right: 123px;
         }
       }
 

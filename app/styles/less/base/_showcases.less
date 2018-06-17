@@ -5,14 +5,18 @@
  */
 
 /* ... Included in "Home" (index), "About Us" (Team) & "Showcases" (Testimonials) pages ... */
-
+#about {
+ .team-header {
+   h4 {
+     margin: 100px 0 100px 0;
+   }
+ }
+}
 .about-grids {
   margin-top: 1.5em;
   margin-right: 0;
   margin-left: 0;
   padding: 0;
-  background: @bg-lilac-light;
-
   &.row {
     .col {
       padding: 0;
@@ -78,7 +82,6 @@
 
     // PICs & VIDEO areas
     .about-grid-pic {
-
       img {
         width: 100%;
       }
@@ -95,27 +98,29 @@
 
     // Backgrounds Colors
     &.about-grid1 {
-      background: @main-green;
-
+      background: #34495E;
       .about-grid-info {
         p,
         h4,
         a {
           color: @white;
+          padding: 10px 1em 10px 1em;
+          margin: 0;
         }
         h4 {
-          border-bottom: 1px solid @white;
+          border-bottom: 1px solid #99A3A4;
         }
       }
     }
     &.about-grid2 {
-      background: @bg-lilac-light;
-
+     background: @bg-lilac-light;
       .about-grid-info {
         p,
         h4,
         a {
           color: @darkest-lilac;
+          padding: 10px 1em 10px 1em;
+          margin: 0;
         }
         h4 {
           border-bottom: 1px solid @darkest-lilac;
@@ -126,11 +131,11 @@
 }
 
 // Media Queries to change the Blocks
-@media (min-width: 769px) and (max-width: 1280px) {
+@media (min-width: 769px) {
   .about-grids {
     .about-grid.about-grid1,
     .about-grid.about-grid2 {
-      width: 100%;
+      width:100%;
 
       .about-grid-pic,
       .about-grid-info {
@@ -158,6 +163,16 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .about-grids {
+    .about-grid.about-grid1,
+    .about-grid.about-grid2 {
+      width: 80%;
+      margin: 0 10% 0 10%;
+    }
+  }
+}
+
 @media (max-width: 980px) {
   .about-grids {
     .about-grid {
@@ -176,7 +191,7 @@
   .about-grids {
     .about-grid {
       .about-grid-info {
-        padding: 1.5em 2em 0.1em 2em;
+        padding: 1.5em 2em 0em 2em;
 
         p {
           font-size: 17px;
@@ -197,10 +212,10 @@
       .about-grid-pic,
       .about-grid-info {
         width: 100%;
-        float: left;
+
       }
       .about-grid-info {
-        padding: 2.3em 2.5em 2.3em 2.5em;
+        padding: 15px 0 15px 0;
       }
     }
   }
